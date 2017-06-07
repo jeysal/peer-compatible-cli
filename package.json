@@ -1,0 +1,73 @@
+{
+  "private": true,
+  "name": "peer-compatible-cli",
+  "version": "1.0.0",
+  "description": "Find versions of a package that work with given peer dependencies",
+  "keywords": [
+    "compatible",
+    "peer",
+    "dependency",
+    "dependencies",
+    "dep",
+    "deps",
+    "package",
+    "version",
+    "cli"
+  ],
+  "bin": {
+    "peer-compatible": "src/cli.js"
+  },
+  "author": {
+    "name": "Tim Seckinger",
+    "email": "seckinger.tim@gmail.com",
+    "url": "https://github.com/jeysal"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jeysal/peer-compatible-cli"
+  },
+  "license": "MIT",
+  "scripts": {
+    "clean": "rimraf dist",
+    "check": "run-p lint typecheck test",
+    "lint": "eslint src test",
+    "typecheck": "flow check",
+    "test": "jest",
+    "t": "jest --watchAll",
+    "build": "babel src -d dist --ignore '**/*.test.js'",
+    "postbuild": "run-p copymeta copyflow",
+    "copymeta": "cp package.json LICENSE README.* dist",
+    "copyflow": "flow-copy-source src dist --ignore '**/*.test.js'",
+    "prefix": "prettier --single-quote --trailing-comma all --write {src,test}/**/*.js",
+    "fix": "eslint src test --fix"
+  },
+  "dependencies": {
+    "npm-package-arg": "^5.1.2",
+    "peer-compatible": "^1.0.0",
+    "yargs": "^8.0.1"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.24.1",
+    "babel-eslint": "^7.2.3",
+    "babel-jest": "^20.0.3",
+    "babel-preset-env": "^1.5.1",
+    "babel-preset-flow": "^6.23.0",
+    "babel-preset-stage-2": "^6.24.1",
+    "copyfiles": "^1.2.0",
+    "eslint": "^3.19.0",
+    "eslint-config-airbnb-base": "^11.2.0",
+    "eslint-plugin-flowtype": "^2.33.0",
+    "eslint-plugin-import": "^2.3.0",
+    "eslint-plugin-prettier": "^2.1.1",
+    "execa": "^0.7.0",
+    "flow-bin": "^0.47.0",
+    "flow-copy-source": "^1.1.0",
+    "flow-typed": "^2.1.2",
+    "jest": "^20.0.4",
+    "live-server": "^1.2.0",
+    "npm-run-all": "^4.0.2",
+    "prettier": "^1.3.1",
+    "prettier-eslint": "^6.2.3",
+    "rimraf": "^2.6.1"
+  }
+}

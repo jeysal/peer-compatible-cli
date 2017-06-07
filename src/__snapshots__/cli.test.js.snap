@@ -1,0 +1,35 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`finds @angular/material versions for angular 2.0.0 1`] = `
+"2.0.0-alpha.9-experimental
+2.0.0-alpha.9-experimental-pizza
+2.0.0-alpha.9-experimental-5
+2.0.0-alpha.9
+2.0.0-alpha.9-1
+2.0.0-alpha.9-2
+2.0.0-alpha.9-3
+2.0.0-alpha.10-experimental-yogurt
+2.0.0-alpha.10-experimental-coffee
+2.0.0-alpha.10-experimental-3
+2.0.0-alpha.10-experimental-4
+2.0.0-alpha.10-experimental5
+2.0.0-alpha.10-experimental6
+2.0.0-alpha.10"
+`;
+
+exports[`ignores peers not required at all 1`] = `
+"2.0.0-alpha.9-experimental
+2.0.0-alpha.9-experimental-pizza
+2.0.0-alpha.9-experimental-5
+2.0.0-alpha.9
+2.0.0-alpha.9-1
+2.0.0-alpha.9-2
+2.0.0-alpha.9-3
+2.0.0-alpha.10-experimental-yogurt
+2.0.0-alpha.10-experimental-coffee
+2.0.0-alpha.10-experimental-3
+2.0.0-alpha.10-experimental-4
+2.0.0-alpha.10-experimental5
+2.0.0-alpha.10-experimental6
+2.0.0-alpha.10"
+`;
