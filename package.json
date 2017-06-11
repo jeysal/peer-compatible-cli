@@ -15,7 +15,7 @@
     "cli"
   ],
   "bin": {
-    "peer-compatible": "src/cli.js"
+    "peer-compatible": "cli.js"
   },
   "author": {
     "name": "Tim Seckinger",
